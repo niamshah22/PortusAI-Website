@@ -74,6 +74,22 @@
             height: 1px;
             background: linear-gradient(to right, transparent, #e5e5e5, transparent);
         }
+
+        /* Marquee ticker */
+        .marquee {
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 60s linear infinite;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
     </style>
 </head>
 <body class="selection:bg-brand selection:text-white">
@@ -82,36 +98,36 @@
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-neutral-100">
         <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="flex items-center gap-1">
-                <span class="text-2xl font-extrabold tracking-tighter text-neutral-950">portusai<span class="text-brand">.</span></span>
+                <span class="text-2xl font-extrabold tracking-tighter text-neutral-950">portus<span class="text-brand">ai</span></span>
             </div>
             
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-600">
-                <a href="#what-i-do" class="hover:text-brand transition-colors">What I Do</a>
-                <a href="#process" class="hover:text-brand transition-colors">Process</a>
-                <a href="#pricing" class="hover:text-brand transition-colors">Pricing</a>
-                <a href="#about" class="hover:text-brand transition-colors">About</a>
+                <a href="#problem" class="hover:text-brand transition-colors">The Gap</a>
+                <a href="#what-i-do" class="hover:text-brand transition-colors">The Solution</a>
+                <a href="#process" class="hover:text-brand transition-colors">The Bridge</a>
+                <a href="#about" class="hover:text-brand transition-colors">About Me</a>
             </div>
 
             <div class="flex items-center gap-4">
-                <a href="https://calendly.com/niamshah/intro" class="bg-brand hover:bg-brand-dark text-white px-5 py-2 rounded-full text-sm font-semibold transition-all transform active:scale-95 shadow-lg shadow-brand/20">
-                    Book a 15-min call
+                <a href="https://calendly.com/niamshah-wvw/portusai-discovery-call" class="bg-brand hover:bg-brand-dark text-white px-5 py-2 rounded-full text-sm font-semibold transition-all transform active:scale-95 shadow-lg shadow-brand/20">
+                    Find your leverage gap
                 </a>
             </div>
         </nav>
     </header>
 
-    <main class="pt-32">
+    <main class="pt-20">
         <!-- 2. Hero Section -->
-        <section class="max-w-4xl mx-auto px-6 text-center py-20 md:py-32 fade-in">
+        <section class="max-w-4xl mx-auto px-6 text-center py-12 md:py-20 fade-in">
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-neutral-950 mb-8 leading-[1.1]">
-                Your practice is full.<br>Your team is <span class="text-brand">drowning.</span>
+                Grow your practice <span class="text-brand">without</span> hiring more people.
             </h1>
             <p class="text-xl md:text-2xl text-neutral-600 mb-12 leading-relaxed max-w-3xl mx-auto">
-                I build AI-powered marketing and operations systems for small UK accountancy practices. More qualified leads, fewer admin hours, your team freed to do what only humans can.
+                AI marketing and operations systems for small UK accountancy practices. Stuck on growth or capacity, I build what your team needs.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <a href="https://calendly.com/niamshah/intro" class="w-full sm:w-auto bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl shadow-brand/20">
-                    Book a 15-min call
+                <a href="https://calendly.com/niamshah-wvw/portusai-discovery-call" class="w-full sm:w-auto bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl shadow-brand/20">
+                    Find your leverage gap
                 </a>
                 <a href="#problem" class="text-neutral-500 hover:text-neutral-900 font-medium transition-colors flex items-center gap-2">
                     See how it works 
@@ -120,88 +136,101 @@
             </div>
         </section>
 
-        <!-- 3. Proven Outcomes / Current Focus -->
-        <section class="bg-neutral-100 py-8 mb-20 fade-in">
-            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm md:text-base">
-                <span class="text-neutral-400 uppercase tracking-widest font-bold text-xs">Currently working with</span>
-                <span class="w-1.5 h-1.5 rounded-full bg-brand hidden md:block"></span>
-                <p class="font-semibold text-neutral-800">
-                    Weston Opticians — full marketing + ops rebuild, launching summer 2026
-                </p>
-            </div>
-            <div class="text-center mt-3">
-                <p class="text-xs text-neutral-400 italic">
-                    First UK accountancy practice client onboarding soon. Happy to walk through the build on a discovery call.
-                </p>
+        <!-- Brand Ticker -->
+        <section class="py-12 border-y border-neutral-100 bg-white fade-in">
+            <p class="text-center text-xs font-bold uppercase tracking-widest text-neutral-400 mb-8">Brands I've worked with</p>
+            <div class="marquee">
+                <div class="marquee-track">
+                    <div class="flex items-center gap-16 pr-16 whitespace-nowrap">
+                        <img src="/logos/amazon.png" alt="Amazon" class="h-10 w-auto shrink-0">
+                        <img src="/logos/kraft-heinz.png" alt="Kraft Heinz" class="h-7 w-auto shrink-0">
+                        <img src="/logos/home-made.png" alt="Home Made" class="h-7 w-auto shrink-0">
+                        <img src="/logos/sportpursuit.png" alt="SportPursuit" class="h-8 w-auto shrink-0">
+                        <img src="/logos/trail-dog-project.png" alt="The Trail Dog Project" class="h-20 w-auto shrink-0">
+                        <img src="/logos/weston-opticians.png" alt="Weston Opticians" class="h-10 w-auto shrink-0">
+                        <img src="/logos/amazon.png" alt="Amazon" class="h-10 w-auto shrink-0">
+                        <img src="/logos/kraft-heinz.png" alt="Kraft Heinz" class="h-7 w-auto shrink-0">
+                        <img src="/logos/home-made.png" alt="Home Made" class="h-7 w-auto shrink-0">
+                        <img src="/logos/sportpursuit.png" alt="SportPursuit" class="h-8 w-auto shrink-0">
+                        <img src="/logos/trail-dog-project.png" alt="The Trail Dog Project" class="h-20 w-auto shrink-0">
+                        <img src="/logos/weston-opticians.png" alt="Weston Opticians" class="h-10 w-auto shrink-0">
+                    </div>
+                    <div class="flex items-center gap-16 pr-16 whitespace-nowrap" aria-hidden="true">
+                        <img src="/logos/amazon.png" alt="" class="h-10 w-auto shrink-0">
+                        <img src="/logos/kraft-heinz.png" alt="" class="h-7 w-auto shrink-0">
+                        <img src="/logos/home-made.png" alt="" class="h-7 w-auto shrink-0">
+                        <img src="/logos/sportpursuit.png" alt="" class="h-8 w-auto shrink-0">
+                        <img src="/logos/trail-dog-project.png" alt="" class="h-20 w-auto shrink-0">
+                        <img src="/logos/weston-opticians.png" alt="" class="h-10 w-auto shrink-0">
+                        <img src="/logos/amazon.png" alt="" class="h-10 w-auto shrink-0">
+                        <img src="/logos/kraft-heinz.png" alt="" class="h-7 w-auto shrink-0">
+                        <img src="/logos/home-made.png" alt="" class="h-7 w-auto shrink-0">
+                        <img src="/logos/sportpursuit.png" alt="" class="h-8 w-auto shrink-0">
+                        <img src="/logos/trail-dog-project.png" alt="" class="h-20 w-auto shrink-0">
+                        <img src="/logos/weston-opticians.png" alt="" class="h-10 w-auto shrink-0">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <div class="divider max-w-5xl mx-auto mb-20"></div>
 
         <!-- 4. The Real Problem -->
-        <section id="problem" class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-start fade-in">
-            <div>
+        <section id="problem" class="max-w-7xl mx-auto px-6 py-20 fade-in">
+            <!-- Top: centred intro -->
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <p class="text-xs font-bold uppercase tracking-widest text-brand mb-4">The Gap</p>
                 <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-950 mb-4">
-                    You don't have a lead problem.
+                    The real problem isn't growth or capacity.
                 </h2>
-                <h3 class="text-2xl md:text-3xl font-medium text-brand">
-                    You have a capacity problem.
+                <h3 class="text-2xl md:text-3xl font-medium text-brand mb-8">
+                    It's leverage.
                 </h3>
-            </div>
-            <div class="space-y-6 text-lg text-neutral-600 leading-relaxed">
-                <p>
-                    Word-of-mouth fills your pipeline. You're good at what you do, and the referrals keep coming. But that's exactly where the pain starts.
+                <p class="text-lg text-neutral-600 leading-relaxed">
+                    Most small practices grow through word-of-mouth. Referrals fill the pipeline, the work keeps coming. But word-of-mouth has a ceiling. You're hitting it in one of two ways.
                 </p>
-                <p>
-                    The real bottleneck is your team stuck on data entry, document chasing, and sending the same 50 client emails every single week. While that's happening, the relationship work — the bit only humans can do — gets squeezed out.
+            </div>
+
+            <!-- Middle: two cards -->
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-brand/5 border border-brand/20 rounded-2xl p-10">
+                    <div class="w-1 h-12 bg-brand rounded-full mb-6"></div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-neutral-950 mb-4">You want to grow beyond referrals.</h3>
+                    <p class="text-lg text-neutral-600 leading-relaxed">
+                        Every hour on marketing is an hour stolen from billable work. You haven't had the time or budget to figure out what works for accountancy practices. LinkedIn? Google Ads? Email nurture? So you wait for the phone to ring.
+                    </p>
+                </div>
+                <div class="bg-brand/5 border border-brand/20 rounded-2xl p-10">
+                    <div class="w-1 h-12 bg-brand rounded-full mb-6"></div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-neutral-950 mb-4">Or your team's already drowning.</h3>
+                    <p class="text-lg text-neutral-600 leading-relaxed">
+                        Year-end approaches and three clients still haven't sent records. Your team re-keys receipts daily. Late payments roll on for months. The same 30 questions hit your inbox every quarter, answered by hand.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom: centred conclusion -->
+            <div class="max-w-3xl mx-auto text-center space-y-6">
+                <p class="text-lg text-neutral-600 leading-relaxed">
+                    Both roads end at the same wall: you can't grow without burning out yourself or the team.
+                </p>
+                <p class="text-xl text-neutral-900 font-semibold leading-relaxed">
+                    You don't need more leads or more people. You need systems that turn referrals into predictable inbound, and admin into automated workflows.
                 </p>
             </div>
         </section>
 
-        <!-- 5. The Shift -->
-        <section class="max-w-7xl mx-auto px-6 py-20 fade-in">
-            <h2 class="text-3xl font-bold mb-12 text-center">From manual practice to AI-leveraged practice</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- From/To 1 -->
-                <div class="bg-white p-8 rounded-2xl border border-neutral-100 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-4">Operations</div>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <span class="text-neutral-400 font-bold shrink-0">From:</span>
-                            <span class="text-neutral-500">Chasing documents manually via email</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-brand font-bold shrink-0">To:</span>
-                            <span class="text-neutral-900 font-semibold">Clients self-serve via automated workflows</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- From/To 2 -->
-                <div class="bg-white p-8 rounded-2xl border border-neutral-100 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-4">Communication</div>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <span class="text-neutral-400 font-bold shrink-0">From:</span>
-                            <span class="text-neutral-500">50 repetitive client emails per week</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-brand font-bold shrink-0">To:</span>
-                            <span class="text-neutral-900 font-semibold">AI-drafted replies in your voice, your team approves</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- From/To 3 -->
-                <div class="bg-white p-8 rounded-2xl border border-neutral-100 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-4">Growth</div>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <span class="text-neutral-400 font-bold shrink-0">From:</span>
-                            <span class="text-neutral-500">Word-of-mouth only (random)</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-brand font-bold shrink-0">To:</span>
-                            <span class="text-neutral-900 font-semibold">Predictable inbound from Google Ads + LinkedIn</span>
-                        </div>
+        <!-- Testimonial -->
+        <section class="max-w-4xl mx-auto px-6 pt-4 pb-16 fade-in">
+            <div class="bg-neutral-950 text-white rounded-3xl p-10 md:p-16 relative overflow-hidden">
+                <div class="absolute top-6 left-8 text-9xl font-black text-brand/30 leading-none select-none">"</div>
+                <blockquote class="relative text-xl md:text-2xl font-medium leading-relaxed mb-8">
+                    I highly recommend using Niam for your project! He is honest, hard working, and easy to work with. I so appreciate that he put his morals over money when confirming what I actually needed in my project. He was also very open about what experience he has and what he can do. The final product turned out great and I will definitely be working with him again in the future!
+                </blockquote>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-brand flex items-center justify-center font-bold text-white">B</div>
+                    <div>
+                        <div class="font-bold">Bailey</div>
+                        <div class="text-sm text-neutral-400">The Trail Dog Project</div>
                     </div>
                 </div>
             </div>
@@ -211,41 +240,44 @@
         <section id="what-i-do" class="max-w-7xl mx-auto px-6 py-20 fade-in">
             <div class="grid md:grid-cols-2 gap-16 lg:gap-32">
                 <div>
-                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-950 mb-8 sticky top-24">
-                        The systems I build for you.
-                    </h2>
+                    <div class="sticky top-24">
+                        <p class="text-xs font-bold uppercase tracking-widest text-brand mb-4">The Solution</p>
+                        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-950 mb-8">
+                            The systems I build for you.
+                        </h2>
+                    </div>
                 </div>
                 <div class="space-y-20">
                     <!-- 01 -->
                     <div class="group">
                         <div class="text-5xl font-black text-brand/10 group-hover:text-brand/20 transition-colors mb-4 italic">01</div>
-                        <h3 class="text-2xl font-bold mb-4">Inbound engine</h3>
+                        <h3 class="text-2xl font-bold mb-4">Predictable new business</h3>
                         <p class="text-neutral-600 text-lg leading-relaxed">
-                            Google Ads + LinkedIn presence + email nurture, dialled to the questions UK practice owners actually search. We don't just "advertise"; we capture the intent of high-value clients searching for experts.
+                            Word-of-mouth fills the pipeline but you can't predict when. I build the system that brings the right practice owners to your door consistently. No more guessing where next quarter's clients come from.
                         </p>
                     </div>
                     <!-- 02 -->
                     <div class="group">
                         <div class="text-5xl font-black text-brand/10 group-hover:text-brand/20 transition-colors mb-4 italic">02</div>
-                        <h3 class="text-2xl font-bold mb-4">Operations layer</h3>
+                        <h3 class="text-2xl font-bold mb-4">Enquiries that convert</h3>
                         <p class="text-neutral-600 text-lg leading-relaxed">
-                            AI workflows for data entry, document chasing, repetitive client comms, and late-payment follow-ups. We remove the "busy work" that kills productivity and team morale.
+                            Practices lose prospects because responses are slow, manual, inconsistent. I build the path from first contact to signed client that runs in the background, so warm interest never goes cold.
                         </p>
                     </div>
                     <!-- 03 -->
                     <div class="group">
                         <div class="text-5xl font-black text-brand/10 group-hover:text-brand/20 transition-colors mb-4 italic">03</div>
-                        <h3 class="text-2xl font-bold mb-4">Post-enquiry conversion</h3>
+                        <h3 class="text-2xl font-bold mb-4">An admin-free practice</h3>
                         <p class="text-neutral-600 text-lg leading-relaxed">
-                            Automated discovery-to-onboarding flow that turns enquiries into clients with minimal manual touch. A professional, frictionless experience for your new clients from second one.
+                            Year-end approaches and three clients still haven't sent records. Your senior reviewers spend Thursdays chasing P60s instead of reviewing accounts. I take the busywork off your team so they do the work only humans can.
                         </p>
                     </div>
                     <!-- 04 -->
                     <div class="group">
                         <div class="text-5xl font-black text-brand/10 group-hover:text-brand/20 transition-colors mb-4 italic">04</div>
-                        <h3 class="text-2xl font-bold mb-4">Ongoing optimisation</h3>
+                        <h3 class="text-2xl font-bold mb-4">Systems that compound</h3>
                         <p class="text-neutral-600 text-lg leading-relaxed">
-                            A monthly review of what's working, what to iterate, and where to expand AI leverage. This isn't a "set and forget" setup — we grow as the tech evolves.
+                            Most workflows go stale within six months. I review monthly, kill what isn't working, expand what compounds. Your practice sharpens as the tech evolves.
                         </p>
                     </div>
                 </div>
@@ -255,86 +287,69 @@
         <!-- 7. The Process -->
         <section id="process" class="bg-neutral-950 text-white py-24 fade-in">
             <div class="max-w-7xl mx-auto px-6">
+                <p class="text-xs font-bold uppercase tracking-widest text-brand mb-4 text-center">The Bridge</p>
                 <h2 class="text-3xl font-bold mb-16 text-center">Process</h2>
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
                     <!-- Step 01 -->
                     <div class="relative">
                         <div class="w-12 h-12 rounded-full border-2 border-brand flex items-center justify-center text-brand font-bold mb-6 bg-brand/10">01</div>
                         <h4 class="font-bold mb-2">Discovery Call</h4>
-                        <p class="text-neutral-400 text-sm">30 min, free. We look at your bottleneck.</p>
+                        <p class="text-neutral-400 text-sm">We figure out where your practice is stuck and whether I can help.</p>
                         <div class="hidden md:block absolute top-6 left-12 right-0 h-[2px] bg-neutral-800 -z-10 mt-[-1px]"></div>
                     </div>
                     <!-- Step 02 -->
                     <div class="relative">
                         <div class="w-12 h-12 rounded-full border-2 border-brand flex items-center justify-center text-brand font-bold mb-6 bg-brand/10">02</div>
                         <h4 class="font-bold mb-2">Audit + Scope</h4>
-                        <p class="text-neutral-400 text-sm">1 week. We map the exactly which workflows to AI-enable.</p>
+                        <p class="text-neutral-400 text-sm">I map your current workflows and identify the biggest wins to action first. You get a written scope with clear priorities.</p>
                         <div class="hidden md:block absolute top-6 left-12 right-0 h-[2px] bg-neutral-800 -z-10 mt-[-1px]"></div>
                     </div>
                     <!-- Step 03 -->
                     <div class="relative">
                         <div class="w-12 h-12 rounded-full border-2 border-brand flex items-center justify-center text-brand font-bold mb-6 bg-brand/10">03</div>
                         <h4 class="font-bold mb-2">Build + Integrate</h4>
-                        <p class="text-neutral-400 text-sm">2-4 weeks. I build and connect the plumbing.</p>
+                        <p class="text-neutral-400 text-sm">I build the systems and connect them to your existing tools (Xero, your CRM, your inbox). Nothing for your team to learn from scratch.</p>
                         <div class="hidden md:block absolute top-6 left-12 right-0 h-[2px] bg-neutral-800 -z-10 mt-[-1px]"></div>
                     </div>
                     <!-- Step 04 -->
                     <div class="relative">
                         <div class="w-12 h-12 rounded-full border-2 border-brand flex items-center justify-center text-brand font-bold mb-6 bg-brand/10">04</div>
                         <h4 class="font-bold mb-2">Launch + Measure</h4>
-                        <p class="text-neutral-400 text-sm">Within 30 days. Your systems go live.</p>
+                        <p class="text-neutral-400 text-sm">Systems go live. We measure what's actually working against the original goals.</p>
                         <div class="hidden md:block absolute top-6 left-12 right-0 h-[2px] bg-neutral-800 -z-10 mt-[-1px]"></div>
                     </div>
                     <!-- Step 05 -->
                     <div class="relative">
                         <div class="w-12 h-12 rounded-full border-2 border-brand flex items-center justify-center text-brand font-bold mb-6 bg-brand/10">05</div>
                         <h4 class="font-bold mb-2">Iterate</h4>
-                        <p class="text-neutral-400 text-sm">Ongoing. We refine based on real data.</p>
+                        <p class="text-neutral-400 text-sm">Review what's working, what to iterate, where to expand.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 8. Why this works -->
-        <section class="max-w-5xl mx-auto px-6 py-32 text-center fade-in">
-            <blockquote class="text-3xl md:text-4xl font-semibold text-neutral-900 leading-tight mb-8 italic">
-                “AI doesn't come pre-packaged. There's no app that solves your client communication, your data bottleneck, or the hours your team spends chasing late payments. You build the workflows, iterate, connect the tools, train them on your data. The firms that started 18 months ago are already lapping the ones waiting for AI to be 'ready'.”
-            </blockquote>
-            <cite class="text-xl font-bold text-brand">— Niam</cite>
-        </section>
-
-        <div class="divider max-w-5xl mx-auto"></div>
-
-        <!-- 9. Pricing -->
-        <section id="pricing" class="max-w-3xl mx-auto px-6 py-20 text-center fade-in">
-            <h2 class="text-4xl font-extrabold mb-6">Straightforward pricing</h2>
-            <div class="bg-white p-10 rounded-3xl border border-neutral-100 shadow-xl mb-12">
-                <p class="text-2xl font-bold mb-4 text-neutral-900 italic">Standard engagement</p>
-                <div class="text-5xl font-black text-brand mb-6">£750-£1,000<span class="text-lg text-neutral-400">/month</span></div>
-                <p class="text-neutral-600 mb-8 max-w-md mx-auto">
-                    Plus ad spend. No long-term lock-ins. Scope agreed on the discovery call. Bespoke work available on request.
-                </p>
-                <a href="https://calendly.com/niamshah/intro" class="inline-block bg-brand hover:bg-brand-dark text-white px-10 py-4 rounded-full font-bold shadow-lg shadow-brand/20 transition-all">
-                    Book a 15-min call
-                </a>
-            </div>
-        </section>
-
         <!-- 10. About Section -->
         <section id="about" class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center fade-in">
-            <div class="aspect-[4/5] rounded-2xl bg-neutral-200 overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" alt="Niam Shah" class="object-cover w-full h-full">
+            <div class="aspect-[4/5] rounded-2xl bg-neutral-200 overflow-hidden relative">
+                <img src="/profile_photo_niam.jpg" alt="Niam Shah" class="object-cover w-full h-full">
             </div>
             <div class="space-y-6">
-                <h2 class="text-4xl font-extrabold tracking-tight mb-8">Operator-led, results-driven.</h2>
+                <p class="text-xs font-bold uppercase tracking-widest text-brand mb-4">About Me</p>
+                <h2 class="text-4xl font-extrabold tracking-tight mb-8">Hi, I'm Niam.</h2>
                 <p class="text-lg text-neutral-600 leading-relaxed">
-                    I spent years in operations before AI was the buzzword it is today. Small UK accountancy practices are the backbone of small business, but right now, you're drowning in the very paperwork you're trying to eliminate for your clients.
-                </p>
-                <p class="text-lg text-neutral-600 leading-relaxed font-semibold text-neutral-900 italic">
-                    "AI-enabled, not AI-replaced. Your team stays relational. AI handles the admin."
+                    I grew up in a family-run opticians on the high street in Watford. My mum still runs it. That shop taught me everything I know about small businesses: staff leaving unexpectedly, the endless tasks nobody wants to do, the work that makes you question why you started in the first place.
                 </p>
                 <p class="text-lg text-neutral-600 leading-relaxed">
-                    Small practices can't afford to throw more expensive bodies at a capacity problem. AI is the leverage that lets you grow without hiring.
+                    Since then I've worked in sales, spent years in data analytics (Python, dashboards, the lot), led teams at a children's charity for over a decade, and coached people through fitness transformations off the back of my own 50kg weight loss. On paper it looks scattered. In practice, it's been the perfect training ground for what I do now.
+                </p>
+                <p class="text-lg text-neutral-600 leading-relaxed">
+                    I work with small UK accountancy practices because I see the same pattern there as in every small business I've been close to. The work that eats your team's day, chasing documents, re-keying receipts, answering the same client questions every quarter, isn't the work that grew the practice. And it's not the work that will grow it from here.
+                </p>
+                <p class="text-lg text-neutral-600 leading-relaxed">
+                    I help practice owners build the systems that take that work off the team's plate. Lead generation, post-enquiry follow-up, document chasing, late-payment reminders, repetitive client communications. Done for you. Built around how your practice actually runs.
+                </p>
+                <p class="text-lg text-neutral-900 font-semibold leading-relaxed">
+                    The goal isn't just efficiency. It's freedom. More time with your family. More headspace to work on the practice instead of in it. Fewer Sunday nights on a spreadsheet.
                 </p>
                 <div class="pt-8 border-t border-neutral-100 uppercase tracking-widest text-xs font-bold text-neutral-400">
                     The Guarantee
@@ -348,10 +363,10 @@
         <!-- 11. Final CTA -->
         <section class="bg-brand text-white py-24 text-center px-6 fade-in">
             <h2 class="text-4xl md:text-5xl font-black mb-8 tracking-tighter">Ready to free your team and grow your practice?</h2>
-            <a href="https://calendly.com/niamshah/intro" class="inline-block bg-white text-brand hover:bg-neutral-100 px-12 py-5 rounded-full text-xl font-black shadow-2xl transition-transform hover:scale-105 active:scale-95 mb-6">
-                Book a 15-min call
+            <a href="https://calendly.com/niamshah-wvw/portusai-discovery-call" class="inline-block bg-white text-brand hover:bg-neutral-100 px-12 py-5 rounded-full text-xl font-black shadow-2xl transition-transform hover:scale-105 active:scale-95 mb-6">
+                Find your leverage gap
             </a>
-            <p class="text-brand-light font-medium">Or email <a href="mailto:niam@portusai.com" class="underline">niam@portusai.com</a> directly</p>
+            <p class="text-neutral-950 font-medium">Or email <a href="mailto:niam@portusai.com" class="underline">niam@portusai.com</a> directly</p>
         </section>
     </main>
 
@@ -359,7 +374,7 @@
     <footer class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-neutral-400 font-medium">
         <div>© 2026 portusai. All rights reserved.</div>
         <div class="flex items-center gap-6">
-            <a href="https://linkedin.com/in/niam-shah" class="hover:text-brand transition-colors flex items-center gap-1">
+            <a href="https://www.linkedin.com/in/niam-shah-b18005383/" class="hover:text-brand transition-colors flex items-center gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                 LinkedIn
             </a>
